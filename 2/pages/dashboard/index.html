@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Zonas de Risco - Malária</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="h">
+        <a href="../../index.html" class="logo">
+    <img src="../../assets/favicon.png" alt="Logo NN" class="logo-image">
+</a>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Pesquisa alguma coisa">
+        </div>
+        <div class="user-controls">
+            <div class="user-icon"> <h3>F</h3> </div>
+            <div class="userName"> <h3 >Fineias Judas</h3>
+            <h5>Administrador</h5>
+            </div>
+        </div>
+    </header>
+    
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="menu-header">Menu</div>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" class="menu-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                        <span class="menu-text">Adicionar instituições</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        <span class="menu-text">Instituições</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                        <span class="menu-text">Estatísticas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 010 7.75"></path>
+                        </svg>
+                        <span class="menu-text">Gerenciamento de usuários</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="menu-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"></path>
+                        </svg>
+                        <span class="menu-text">Definições</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <h1 class="content-title">Imagens de Locais de riscos cadastrados</h1>
+            
+            <section class="municipality-section">
+                <div class="municipality-header">
+                    <h2 class="municipality-title">Município - Cazenga</h2>
+                    <div class="nav-arrows">
+                        <div class="nav-arrow">&lt;</div>
+                        <div class="nav-arrow">&gt;</div>
+                    </div>
+                </div>
+                
+                <div class="image-grid">
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Bairro Popular</div>
+                            <span class="risk-level">Alto Risco</span>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Hoji ya Henda</div>
+                            <span class="risk-level risk-medium">Risco Médio</span>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Tala Hady</div>
+                            <span class="risk-level">Alto Risco</span>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Calawenda</div>
+                            <span class="risk-level risk-low">Baixo Risco</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="municipality-section">
+                <div class="municipality-header">
+                    <h2 class="municipality-title">Município - Viana</h2>
+                    <div class="nav-arrows">
+                        <div class="nav-arrow">&lt;</div>
+                        <div class="nav-arrow">&gt;</div>
+                    </div>
+                </div>
+                
+                <div class="image-grid">
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Zango</div>
+                            <span class="risk-level risk-medium">Risco Médio</span>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Kikuxi</div>
+                            <span class="risk-level">Alto Risco</span>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Estalagem</div>
+                            <span class="risk-level risk-low">Baixo Risco</span>
+                        </div>
+                    </div>
+                    
+                    <div class="risk-location-card">
+                        <div class="risk-image"></div>
+                        <div class="risk-info">
+                            <div class="risk-title">Viana Sede</div>
+                            <span class="risk-level risk-medium">Risco Médio</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

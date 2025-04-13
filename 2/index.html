@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Rastreamento de Malária</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #8B0000;
+            --text-dark: #333;
+            --gray-light: #e5e5e5;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            padding: 0 20px;
+            border-bottom: 1px solid var(--gray-light);
+            background-color: white;
+        }
+        
+        .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 40px; /* Ajuste a altura conforme necessário */
+    width: auto;
+}
+
+        
+        .search-container {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 10px 15px;
+            border-radius: 25px;
+            border: 1px solid var(--gray-light);
+            font-size: 1rem;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding-left: 40px;
+        }
+        
+        .user-controls {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .user-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--gray-light);
+        }
+        
+        .userName {
+         margin-top: 5px;
+        justify-content: space-between;
+            align-items: center;
+        }
+        
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            padding: 20px;
+        }
+        
+        .home-content {
+            text-align: center;
+            max-width: 800px;
+        }
+        
+        h1 {
+            color: #7F1734;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color:  #7F1734;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #2b030e;
+        }
+        
+        footer {
+            background-color: var(--text-dark);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+    <img src="assets/favicon.png" alt="Logo NN" class="logo-image">
+</a>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Pesquisa alguma coisa">
+        </div>
+        <div class="user-controls">
+            <div class="user-icon"></div>
+            <div class="userName"> <h3 >Fineias Judas</h3></div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="home-content">
+            <h1>Sistema de Rastreamento de Malária</h1>
+            <p>
+                Bem-vindo à plataforma de monitoramento e gestão de zonas de risco de contágio da malária.
+                Este sistema permite visualizar, cadastrar e acompanhar áreas de risco, facilitando o controle
+                e a prevenção da malária em municípios prioritários.
+            </p>
+            <a href="./pages/dashboard/index.html" class="cta-button">Acessar Dashboard</a>
+        </div>
+    </main>
+    
+    <footer>
+        &copy; 2025 Sistema de Rastreamento de Malária. Todos os direitos reservados a Salonis.
+    </footer>
+</body>
+</html>
