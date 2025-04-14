@@ -160,6 +160,41 @@ header {
     font-size: 0.9rem;
 }
 
+.menu-item1 {
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    margin-bottom: 5px;
+    color: #7F1734;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.menu-text1 {
+    font-weight: bold;
+    margin-left: 5px;
+    color: #7F1734;
+}
+
+.menu-text{
+    font-weight: bold;
+}
+.risk-button {
+    background-color: #7F1734;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.risk-button:hover {
+    background-color: #5A0F27;
+}
+
 .menu-item:hover {
     background-color: rgba(139, 0, 0, 0.05);
 }
@@ -228,7 +263,7 @@ header {
 .image-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    gap: 20px;
 }
 
 .risk-location-card {
@@ -237,21 +272,26 @@ header {
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.menu-text{
-    font-weight: bold;
-}
 
 .risk-image {
     width: 100%;
     height: 0;
-    padding-bottom: 75%;
-    background-color: var(--gray-light);
-    position: relative;
+    padding-bottom: 75%; /* Mantém a proporção do card */
+    background-color: var(--gray-light); /* Cor de fundo padrão */
+    background-size: cover; /* Ajusta a imagem para ocupar todo o espaço */
+    background-position: center; /* Centraliza a imagem */
+    position: relative; /* Mantém o comportamento no layout */
+    border-radius: 10px; /* Opcional, para corresponder ao design */
+    overflow: hidden; /* Oculta qualquer excesso de imagem */
 }
 
-.risk-info {
-    padding: 10px;
-}
+
+.risk-info { 
+    padding: 15px; 
+    display: flex;  
+    justify-content: space-between; /* Este alinhamento distribui o espaço entre o título e o "Testar" */  
+    align-items: center; /* Alinha verticalmente */  
+}  
 
 .risk-title {
     font-size: 0.9rem;
@@ -262,19 +302,24 @@ header {
 .risk-level {
     font-size: 0.8rem;
     color: white;
-    background-color: #bb061e;
-    padding: 8px 14px;
+    background-color: #7F1734;
+    padding: 4px 14px;
     border-radius: 5px;
     display: inline-block;
 }
-
-.risk-medium {
-    background-color: #db6504;
+#notification-message {
+    position: relative; /* Para empurrar o conteúdo abaixo */
+    background-color: #7F1734; /* Fundo para destacar a mensagem */
+    color: #f9f9f9;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 0; /* Espaçamento interno */
+    display: none; /* Inicialmente escondido */
+    transition: all 1.3s ease; /* Suaviza a entrada e saída */
+    height: auto; /* Ajusta altura dinamicamente */
 }
 
-.risk-low {
-    background-color: #27ae60;
-}
 
 @media (max-width: 1024px) {
     .image-grid {
@@ -284,7 +329,7 @@ header {
 
 @media (max-width: 638px) {
     .image-grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .sidebar {

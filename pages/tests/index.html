@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Zonas de Risco - Malária</title>
+    <title>Dashboard de Zonas de Risco - Tests</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div id="notification-message" style="display: none;"></div>
+
     <header>
-        <a href="./index.html" class="logo">
+        <a href="../dashboard/index.html" class="logo">
     <img src="../../assets/favicon.png" alt="Logo NN" class="logo-image">
     <h5>MapaZZZ</h5>
 </a>
@@ -17,9 +19,9 @@
         </div>
         <div class="user-controls">
             <a href="#" style="text-decoration: none;">
-            <div class="user-icon"> <h3>F</h3> </div>
-            <div class="userName"> <h3 >Fineias Judas</h3>
-            <h5>Administrador</h5>
+                <div class="user-icon"> <h3>F</h3> </div>
+                <div class="userName"> <h3 >Fineias Judas</h3>
+                <h5>Administrador</h5>
             </a>
             </div>
         </div>
@@ -58,23 +60,23 @@
                     </a>
                 </li>
                 <li>  
-                    <a href="../tests/index.html" class="menu-item">  
-                        <svg  
+                    <a href="../tests/index.html" class="menu-item" style="background-color: #fff;">  
+                        <svg
                             viewBox="0 0 24 24"  
                             width="24"  
                             height="24"  
                             fill="none"  
-                            stroke="white"  
+                            stroke="#7F1734"  
                             stroke-width="2"  
                             stroke-linecap="round"  
                             stroke-linejoin="round"  
                         >  
-                            <circle cx="12" cy="12" r="10" fill="none" stroke="white" stroke-width="2" />  
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="#7F1734" stroke-width="2" />  
                             <path d="M9 12l2 2 4-4" />  
-                        </svg>  
-                        <span class="menu-text">Testes</span>  
+                        </svg>
+                        <span class="menu-text" style="color: #7F1734;">Testes</span>  
                     </a>  
-                </li>  
+                </li> 
                 <li>
                     <a href="#" class="menu-item">
                         <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -99,96 +101,63 @@
         </aside>
         
         <main class="main-content">
-            <h1 class="content-title">Imagens de Locais de riscos cadastrados</h1>
+            <h1 class="content-title">Testes</h1>
             
             <section class="municipality-section">
                 <div class="municipality-header">
-                    <h2 class="municipality-title">Município - Cazenga</h2>
-                    <div class="nav-arrows">
-                        <div class="nav-arrow">&lt;</div>
-                        <div class="nav-arrow">&gt;</div>
-                    </div>
+                    <h2 class="municipality-title">Notificações</h2>
                 </div>
                 
                 <div class="image-grid">
                     <div class="risk-location-card">
-                        <div class="risk-image"></div>
+                        <div class="risk-image" data-bg="../../assets/cabin-924958_1920.jpg">
+                        </div>
                         <div class="risk-info">
-                            <div class="risk-title">Bairro Popular</div>
-                            <span class="risk-level">Alto Risco</span>
+                            <div class="risk-title">Alerta de Clima</div>
+                            <button class="risk-button" onclick="sendNotification('Alerta de Clima')">Testar</button>
                         </div>
                     </div>
                     
                     <div class="risk-location-card">
-                        <div class="risk-image"></div>
+                        <div class="risk-image" data-bg="../../assets/quiz-2432440_1280.png">
+                        </div>
                         <div class="risk-info">
-                            <div class="risk-title">Hoji ya Henda</div>
-                            <span class="risk-level risk-medium">Risco Médio</span>
+                            <div class="risk-title">Notificações de Jogo</div>
+                            <button class="risk-button" onclick="sendNotification('Notificações de Jogo')">Testar</button>
                         </div>
                     </div>
                     
                     <div class="risk-location-card">
-                        <div class="risk-image"></div>
+                        <div class="risk-image" data-bg="../../assets/rain-7995866_1920.jpg">
+                        </div>
                         <div class="risk-info">
-                            <div class="risk-title">Tala Hady</div>
-                            <span class="risk-level">Alto Risco</span>
+                            <div class="risk-title">Alerta de Chuva</div>
+                            <button class="risk-button" onclick="sendNotification('Alerta de Chuva')">Testar</button>
                         </div>
                     </div>
                     
                     <div class="risk-location-card">
-                        <div class="risk-image"></div>
+                        <div class="risk-image" data-bg="../../assets/blank-89184_1920.jpg">
+                        </div>
                         <div class="risk-info">
-                            <div class="risk-title">Calawenda</div>
-                            <span class="risk-level risk-low">Baixo Risco</span>
+                            <div class="risk-title">Alerta diária</div>
+                            <button class="risk-button" onclick="sendNotification('Alerta diária')">Testar</button>
+                        </div>
+                    </div>
+                    <div class="risk-location-card">
+                        <div class="risk-image" data-bg="../../assets/new-crown-virus-4923606_1920.jpg">
+                        </div>
+                        <div class="risk-info">
+                            <div class="risk-title">Alerta de um novo vírus</div>
+                            <button class="risk-button" onclick="sendNotification('Alerta de um novo vírus')">Testar</button>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <section class="municipality-section">
-                <div class="municipality-header">
-                    <h2 class="municipality-title">Município - Viana</h2>
-                    <div class="nav-arrows">
-                        <div class="nav-arrow">&lt;</div>
-                        <div class="nav-arrow">&gt;</div>
-                    </div>
-                </div>
-                
-                <div class="image-grid">
-                    <div class="risk-location-card">
-                        <div class="risk-image"></div>
-                        <div class="risk-info">
-                            <div class="risk-title">Zango</div>
-                            <span class="risk-level risk-medium">Risco Médio</span>
-                        </div>
-                    </div>
-                    
-                    <div class="risk-location-card">
-                        <div class="risk-image"></div>
-                        <div class="risk-info">
-                            <div class="risk-title">Kikuxi</div>
-                            <span class="risk-level">Alto Risco</span>
-                        </div>
-                    </div>
-                    
-                    <div class="risk-location-card">
-                        <div class="risk-image"></div>
-                        <div class="risk-info">
-                            <div class="risk-title">Estalagem</div>
-                            <span class="risk-level risk-low">Baixo Risco</span>
-                        </div>
-                    </div>
-                    
-                    <div class="risk-location-card">
-                        <div class="risk-image"></div>
-                        <div class="risk-info">
-                            <div class="risk-title">Viana Sede</div>
-                            <span class="risk-level risk-medium">Risco Médio</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
+           
         </main>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
