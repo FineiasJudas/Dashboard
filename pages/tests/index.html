@@ -114,7 +114,7 @@
                         </div>
                         <div class="risk-info">
                             <div class="risk-title">Alerta de Clima</div>
-                            <button class="risk-button" onclick="sendNotification('Alerta de Clima')">Testar</button>
+                            <button class="risk-button" onclick="fetchNotificationClima()">Testar</button>
                         </div>
                     </div>
                     
@@ -123,7 +123,7 @@
                         </div>
                         <div class="risk-info">
                             <div class="risk-title">Notificações de Jogo</div>
-                            <button class="risk-button" onclick="sendNotification('Notificações de Jogo')">Testar</button>
+                            <button class="risk-button" onclick="fetchNotificationGame()">Testar</button>
                         </div>
                     </div>
                     
@@ -131,8 +131,8 @@
                         <div class="risk-image" data-bg="../../assets/rain-7995866_1920.jpg">
                         </div>
                         <div class="risk-info">
-                            <div class="risk-title">Alerta de Chuva</div>
-                            <button class="risk-button" onclick="sendNotification('Alerta de Chuva')">Testar</button>
+                            <div class="risk-title">Alerta de aproximação a zona de perigo</div>
+                            <button class="risk-button" onclick="fetchNotificationApproch()">Testar</button>
                         </div>
                     </div>
                     
@@ -141,15 +141,15 @@
                         </div>
                         <div class="risk-info">
                             <div class="risk-title">Alerta diária</div>
-                            <button class="risk-button" onclick="sendNotification('Alerta diária')">Testar</button>
+                            <button class="risk-button" onclick="fetchNotificationEdu()">Testar</button>
                         </div>
                     </div>
                     <div class="risk-location-card">
                         <div class="risk-image" data-bg="../../assets/new-crown-virus-4923606_1920.jpg">
                         </div>
                         <div class="risk-info">
-                            <div class="risk-title">Alerta de um novo vírus</div>
-                            <button class="risk-button" onclick="sendNotification('Alerta de um novo vírus')">Testar</button>
+                            <div class="risk-title">Alerta de um nova zona de risco</div>
+                            <button class="risk-button" onclick="fetchNotificationNewDangerZone()">Testar</button>
                         </div>
                     </div>
                 </div>
@@ -158,6 +158,149 @@
            
         </main>
     </div>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+    <script>
+        async function logar()
+        {
+            let urlLogar = 'https://mapazzz.onrender.com/api/users/auth/login';
+
+            const userData = await fetch(urlLogar, {
+              method: 'POST',
+              body: JSON.stringify({
+                username: "940926388",
+                password: "123456789"
+              }),
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            });
+            if (userData.ok) {
+                const data = await userData.json();
+                return data.token; 
+            }
+            return null;
+        }
+
+        if (!localStorage.getItem('token')) {
+            logar().then(token => {
+                if (token) {
+                    localStorage.setItem('token', token);
+                    console.log('Token saved:', token);
+                } else {
+                    console.error('Failed to log in');
+                }
+            });
+        } 
+        
+        async function fetchNotificationGame() {
+            console.log('Fetching notification game...');
+            const url = 'https://mapazzz.onrender.com/api/notification/game?latitude=-8.896969&longitude=13.2188043';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            };
+            const response = await fetch(url, options);
+            if (!response.ok) {
+                console.log('Error fetching notification game:', response);
+                throw new Error('Network response was not ok');
+            
+            }
+            const data = await response.json();
+            console.log('Notification game data:', data);
+            sendNotification('Alerta de Jogo');
+        }
+        
+
+        async function fetchNotificationClima() {
+            console.log('Fetching notification game...');
+            const url = 'https://mapazzz.onrender.com/api/notification/climate?latitude=-8.896969&longitude=13.2188043&userId=a5acec55-79b6-4931-b0a8-9866207d1503';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    //'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            };
+            const response = await fetch(url, options);
+            if (!response.ok) {
+                console.log('Error fetching notification game:', response);
+                throw new Error('Network response was not ok');
+            
+            }
+            const data = await response.json();
+            console.log('Notification game data:', data);
+            sendNotification('Alerta de Clima');
+        }
+      
+        async function fetchNotificationEdu() {
+            console.log('Fetching notification game...');
+            const url = 'https://mapazzz.onrender.com/api/alert';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token') 
+                }
+            };
+            const response = await fetch(url, options);
+            if (!response.ok) {
+                console.log('Error fetching notification game:', response);
+                throw new Error('Network response was not ok');
+            
+            }
+            const data = await response.json();
+            console.log('Notification game data:', data);
+            sendNotification('Alerta de Educação');
+        }
+
+        async function fetchNotificationApproch() {
+            console.log('Fetching notification game...');
+            const url = 'https://mapazzz.onrender.com/api/notification/approach_danger_zone?latitude=-8.896969&longitude=13.2188043';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token') 
+                }
+            };
+            const response = await fetch(url, options);
+            if (!response.ok) {
+                console.log('Error fetching notification game:', response);
+                throw new Error('Network response was not ok');
+            
+            }
+            const data = await response.json();
+            console.log('Notification game data:', data);
+            sendNotification('Alerta de Aproximação a zona de perigo');
+        }
+
+
+        async function fetchNotificationNewDangerZone() {
+            console.log('Fetching notification game...');
+            const url = 'https://mapazzz.onrender.com/api/notification/new_danger_zone';
+            const options = {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    //'Authorization': 'Bearer ' + localStorage.getItem('token') 
+                }
+            };
+            const response = await fetch(url, options);
+            if (!response.ok) {
+                console.log('Error fetching notification game:', response);
+                throw new Error('Network response was not ok');
+            
+            }
+            const data = await response.json();
+            console.log('Notification game data:', data);
+            sendNotification('Alerta de nova zona de risco');
+        }
+
+    </script>
     <script src="index.js"></script>
 </body>
 </html>

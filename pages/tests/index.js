@@ -1,3 +1,5 @@
+
+
 function sendNotification(alertType) {
     const messageContainer = document.getElementById('notification-message');
     if (!messageContainer) {
@@ -15,6 +17,22 @@ function sendNotification(alertType) {
         messageContainer.style.display = 'none'; // Volta ao estado inicial
     }, 3000); // 3 segundos
 }
+
+async function sendGameAlert(alertType) {
+    const response = await fetch('/api/send-game-alert', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ alertType }),
+    });
+
+    if (response.ok) {
+        sendNotification(alertType);
+    } else {
+        console.error('Erro ao enviar o alerta do jogo:', response.statusText);
+    }
+} 
 
 document.addEventListener('DOMContentLoaded', () => {
     const riskImages = document.querySelectorAll('.risk-image');
