@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #7F1734;
+    --primary-color: #6D122C;
     --sidebar-width: 240px;
     --header-height: 70px;
     --gray-light: #e5e5e5;
@@ -34,7 +34,7 @@ header {
     border-bottom: 1px solid var(--gray-light);
     background-color: white;
     border-width: 1.5px;
-    border-color: #7F1734;
+    border-color: #6D122C;
 
 }
 
@@ -51,7 +51,7 @@ header {
 
 }
 .logo {
-    color: #7F1734;
+    color: #6D122C;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
@@ -67,7 +67,7 @@ header {
     width: 100%;  
     padding: 10px 15px;  
     border-radius: 25px;  
-    border: 1px solid #7F1734;  
+    border: 1px solid #6D122C;  
     font-size: 1rem;  
     color: var(--text-dark); /* Cor do texto */  
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>');  
@@ -83,7 +83,7 @@ header {
 }
 /* Foco */  
 .search-input:focus {  
-    border-color: #7F1734; /* Mantém a cor da borda ao sofrer foco */  
+    border-color: #6D122C; /* Mantém a cor da borda ao sofrer foco */  
     outline: none; /* Remove a borda padrão de foco */  
 }
 
@@ -142,7 +142,7 @@ header {
 
 .sidebar {
     width: var(--sidebar-width);
-    background-color: #7F1734;
+    background-color: #6D122C;
     padding: 20px 0;
 }
 
@@ -211,7 +211,7 @@ header {
 .nav-arrows {
     display: flex;
     gap: 10px;
-    color: #7F1734;
+    color: #6D122C;
 }
 
 .nav-arrow {
@@ -220,7 +220,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7F1734;
+    color: #6D122C;
     font-weight: 800;
     cursor: pointer;
 }

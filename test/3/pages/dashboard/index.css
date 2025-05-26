@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #7F1734;
+    --primary-color: #6D122C;
     --sidebar-width: 240px;
     --header-height: 70px;
     --gray-light: #e5e5e5;
@@ -34,7 +34,7 @@ header {
     border-bottom: 1px solid var(--gray-light);
     background-color: white;
     border-width: 2px;
-    border-color: #7F1734;
+    border-color: #6D122C;
 
 }
 
@@ -51,7 +51,7 @@ header {
 
 }
 .logo {
-    color: #7F1734;
+    color: #6D122C;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
@@ -212,7 +212,7 @@ header {
 .nav-arrows {
     display: flex;
     gap: 10px;
-    color: #7F1734;
+    color: #6D122C;
 }
 
 .nav-arrow {
@@ -221,7 +221,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #7F1734;
+    color: #6D122C;
     font-weight: 800;
     cursor: pointer;
 }
