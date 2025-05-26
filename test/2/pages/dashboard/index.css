@@ -34,7 +34,7 @@ header {
     border-bottom: 1px solid var(--gray-light);
     background-color: white;
     border-width: 2px;
-    border-color: #6D122C;
+    border-color: #6d1625;
 
 }
 
@@ -128,7 +128,7 @@ header {
 
 .sidebar {
     width: var(--sidebar-width);
-        background-color: #6D122C;
+        background-color: #6d1625;
     border-right: 1px solid var(--gray-light);
     padding: 20px 0;
 }
@@ -198,7 +198,7 @@ header {
 .nav-arrows {
     display: flex;
     gap: 10px;
-    color: #6D122C;
+    color: #6d1625;
 }
 
 .nav-arrow {
@@ -207,7 +207,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6D122C;
+    color: #6d1625;
     font-weight: 800;
     cursor: pointer;
 }

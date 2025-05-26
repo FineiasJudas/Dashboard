@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary-color: #6D122C;
+    --primary-color: #6d1625;
     --sidebar-width: 240px;
     --header-height: 70px;
     --gray-light: #e5e5e5;
@@ -34,7 +34,7 @@ header {
     border-bottom: 1px solid var(--gray-light);
     background-color: white;
     border-width: 1.5px;
-    border-color: #6D122C;
+    border-color: #6d1625;
 
 }
 
@@ -51,7 +51,7 @@ header {
 
 }
 .logo {
-    color: #6D122C;
+    color: #6d1625;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
@@ -67,7 +67,7 @@ header {
     width: 100%;  
     padding: 10px 15px;  
     border-radius: 25px;  
-    border: 1px solid #6D122C;  
+    border: 1px solid #6d1625;  
     font-size: 1rem;  
     color: var(--text-dark); /* Cor do texto */  
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>');  
@@ -83,7 +83,7 @@ header {
 }
 /* Foco */  
 .search-input:focus {  
-    border-color: #6D122C; /* Mantém a cor da borda ao sofrer foco */  
+    border-color: #6d1625; /* Mantém a cor da borda ao sofrer foco */  
     outline: none; /* Remove a borda padrão de foco */  
 }
 
@@ -142,7 +142,7 @@ header {
 
 .sidebar {
     width: var(--sidebar-width);
-    background-color: #6D122C;
+    background-color: #6d1625;
     padding: 20px 0;
 }
 
@@ -166,7 +166,7 @@ header {
     align-items: center;
     padding: 12px 20px;
     margin-bottom: 5px;
-    color: #6D122C;
+    color: #6d1625;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -174,14 +174,14 @@ header {
 .menu-text1 {
     font-weight: bold;
     margin-left: 5px;
-    color: #6D122C;
+    color: #6d1625;
 }
 
 .menu-text{
     font-weight: bold;
 }
 .risk-button {
-    background-color: #6D122C;
+    background-color: #6d1625;
     color: white;
     border: none;
     padding: 8px 14px;
@@ -246,7 +246,7 @@ header {
 .nav-arrows {
     display: flex;
     gap: 10px;
-    color: #6D122C;
+    color: #6d1625;
 }
 
 .nav-arrow {
@@ -255,7 +255,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6D122C;
+    color: #6d1625;
     font-weight: 800;
     cursor: pointer;
 }
@@ -302,14 +302,14 @@ header {
 .risk-level {
     font-size: 0.8rem;
     color: white;
-    background-color: #6D122C;
+    background-color: #6d1625;
     padding: 4px 14px;
     border-radius: 5px;
     display: inline-block;
 }
 #notification-message {
     position: relative; /* Para empurrar o conteúdo abaixo */
-    background-color: #6D122C; /* Fundo para destacar a mensagem */
+    background-color: #6d1625; /* Fundo para destacar a mensagem */
     color: #f9f9f9;
     font-weight: bold;
     font-size: 18px;
